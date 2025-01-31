@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>練習問題　レスポンシブ</title>
+    <style>
+        .contents{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            background-color: rgb(255, 194, 194);
+            width: 800px;
+            height: 170px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .box{
+            background-color: rgb(0, 95, 236);
+            width: 120px;
+            height: 120px;
+            margin-top: 10px;
+        }
+        .item{
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .text{
+            background-color: rgb(0, 0, 0);
+            width: 800px;
+            height: 100px;
+            margin: 0 auto;
+            color: aliceblue;
+        }
+        .boxt{
+            margin-top: 5px;
+            font-size: 14px;
+            color: black;
+        }
+        .kapi{
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            display: block;
+            margin: 10px auto;
+        }
+        .form{
+            width: 100%;
+            height: auto;
+            max-width: 500px;
+            display: block;
+            margin: 10px auto;
+        }
+        @media(max-width:767px){
+            .contents{
+                grid-template-columns: 1fr 1fr;
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contents">
+        <div class="item">
+            <div class="box"></div><p class="boxt">テキスト１</p>
+        </div>
+        <div class="item">
+            <div class="box"></div><p class="boxt">テキスト２</p>
+        </div>
+        <div class="item">
+            <div class="box"></div><p class="boxt">テキスト３</p>
+        </div>
+        <div class="item">
+            <div class="box"></div><p class="boxt">テキスト４</p>
+        </div>
+    </div>
+    <div class="text">文章ダミー文章ダミー文章ダミ
+        ー文章ダミー文章ダミー文章ダミー文章ダミー文章
+        ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章
+        ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミ
+        ー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文
+        章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章ダミー文章
+        </div>
+        <div class="kapi"><img src="kapi.webp" alt="カピバラ" width="500" height="500"></div>
+
+        <div class="form">
+            <form action="#" method="post">
+                <label for="message">お名前：</label>
+                <textarea id="message" name="message" cols="15" rows="1"></textarea>
+                <br><label>
+                    送信を確認する方はチェックしてください：<input type="checkbox" name="agree">
+                </label>
+                <br><label for="message">メッセージ：</label><br>
+                <textarea id="message" name="message" cols="30" rows="6"></textarea><br>
+                <br>
+                <input type="submit" value="送信する">
+            </form>
+        </div>
+</body>
+</html>
